@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LAB_4</string>
+    <string name="update_player">Сохранить участников</string>
+    <string name="new_player">Новый участник</string>
+    <string name="do_random">Розыгрыш</string>
+    <string name="delete_player">Удалить участника</string>
+    <string name="player_hint">Участник</string>
+</resources>
