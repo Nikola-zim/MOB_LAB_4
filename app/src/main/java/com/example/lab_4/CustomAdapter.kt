@@ -9,8 +9,9 @@ import android.widget.Switch
 import android.widget.TextView
 import androidx.annotation.NonNull
 import androidx.recyclerview.widget.RecyclerView
+import java.io.IOException
 
-internal class CustomAdapter(private var itemsList: List<String>) :
+internal class CustomAdapter(var itemsList: ArrayList<String>, var items_action_list: ArrayList<String>) :
     RecyclerView.Adapter<CustomAdapter.MyViewHolder>() {
     internal inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var itemTextView: TextView = view.findViewById(R.id.itemTextView)
@@ -29,16 +30,30 @@ internal class CustomAdapter(private var itemsList: List<String>) :
         holder.itemTextView.text = item
         holder.btnVerification.setOnCheckedChangeListener{ buttonView, isChecked ->
             //holder.btnVerification.isSelected != holder.btnVerification.isSelected
-            hihihi(item)
+            if(isChecked == true){
+                hihihi(item)
+            }
+            if(isChecked == false){
+                remove_from_acting(item)
+            }
         }
     }
 
+    //Обработчики кнопок выбора
     fun hihihi(item: String){
-        Log.d("qwer", item.toString())
+        Log.d("add", item.toString())
+        items_action_list.add(item.toString())
+    }
+    fun remove_from_acting(item: String){
+        Log.d("remove", item.toString())
+        items_action_list.remove(item.toString())
     }
 
     override fun getItemCount(): Int {
         return itemsList.size
     }
+
+
+
 
 }

@@ -29,10 +29,10 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/save_players"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/update_player" />
+            android:text="@string/save_players" />
 
         <Button
             android:id="@+id/new_player"
@@ -41,7 +41,7 @@
             android:text="@string/new_player" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/lottery"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/do_random" />
